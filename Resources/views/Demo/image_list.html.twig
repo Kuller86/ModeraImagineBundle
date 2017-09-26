@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo modera imagine</title>
+<style>
+    .cell {
+        margin-right: 10px;
+        float:left;
+    }
+    .clearfix:after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+</style>
+</head>
+<body>
+    Cached image
+    <div class="row clearfix">
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: inset)</div>
+            <div><img src="{{ '/cached-images/car-warehouse/fetchCachedImage/2274' | imagine('thumbnail') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: outbound)</div>
+            <div><img src="{{ '/cached-images/car-warehouse/fetchCachedImage/2274' | imagine('thumbnail', {thumbnail: { size: [180, 140], mode: 'outbound' }}) }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (height: 140)</div>
+            <div><img src="{{ '/cached-images/car-warehouse/fetchCachedImage/2274' | imagine('relative_resize_heighten') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (width: 180)</div>
+            <div><img src="{{ '/cached-images/car-warehouse/fetchCachedImage/2274' | imagine('relative_resize_widen') }}" /></div>
+        </div>
+    </div>
+    Local image
+    <div class="row clearfix">
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: inset)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fcd07eebd' | imagine('thumbnail') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: outbound)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fcd07eebd' | imagine('thumbnail', {thumbnail: { size: [180, 140], mode: 'outbound' }}) }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (height: 140)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fcd07eebd' | imagine('relative_resize_heighten') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (width: 180)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fcd07eebd' | imagine('relative_resize_widen') }}" /></div>
+        </div>
+    </div>
+    <div class="row clearfix">
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: inset)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fd31c290b' | imagine('thumbnail') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: outbound)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fd31c290b' | imagine('thumbnail', {thumbnail: { size: [180, 140], mode: 'outbound' }}) }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (height: 140)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fd31c290b' | imagine('relative_resize_heighten') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (width: 180)</div>
+            <div><img src="{{ '/cache/dpackage_images/5955fd31c290b' | imagine('relative_resize_widen') }}" /></div>
+        </div>
+    </div>
+    Internet image
+    <div class="row clearfix">
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: inset)</div>
+            <div><img src="{{ 'http://www.nissan.eurostauto.ee/img/dpackage/accessories/juke/2014/Kromad_dekorlist_for_baklucka.jpg' | imagine('thumbnail') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Thumbnail standart (180x140, mode: outbound)</div>
+            <div><img src="{{ 'http://www.nissan.eurostauto.ee/img/dpackage/accessories/juke/2014/Kromad_dekorlist_for_baklucka.jpg' | imagine('thumbnail', {thumbnail: { size: [180, 140], mode: 'outbound' }}) }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (height: 140)</div>
+            <div><img src="{{ 'http://www.nissan.eurostauto.ee/img/dpackage/accessories/juke/2014/Kromad_dekorlist_for_baklucka.jpg' | imagine('relative_resize_heighten') }}" /></div>
+        </div>
+        <div class="cell">
+            <div>Relative resize (width: 180)</div>
+            <div><img src="{{ 'http://www.nissan.eurostauto.ee/img/dpackage/accessories/juke/2014/Kromad_dekorlist_for_baklucka.jpg' | imagine('relative_resize_widen') }}" /></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+modera_imagine_filter_runtime:
+    path: /media/cache/resolve/{filter}/rc/{hash}/{path}
+    defaults:
+        _controller: '%liip_imagine.controller.filter_runtime_action%'
+    methods:
+        - GET
+    requirements:
+        filter: '[A-z0-9_-]*'
+        path: .+
+
+modera_imagine_filter:
+    path: /media/cache/resolve/{filter}/{hash}/{path}
+    defaults:
+        _controller: '%liip_imagine.controller.filter_action%'
+    methods:
+        - GET
+    requirements:
+        filter: '[A-z0-9_-]*'
+        path: .+
+
+modera_imagine_demo:
+    path: /backend/imagine/demo
+    defaults:
+        _controller: 'ModeraImagineBundle:Demo:demo'
+    methods:
+        - GET
